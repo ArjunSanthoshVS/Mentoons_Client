@@ -1,14 +1,19 @@
-.yellow{
-    background-color: yellow;
-    padding: 23px;
-    font-size: large;
-    display: flex;
-    justify-content: space-between;
-    font-family: monospace;
+.yellow {
+  background-color: yellow;
+  padding: 23px;
+  font-size: large;
+  display: flex;
+  justify-content: space-between;
+  font-family: monospace;
 }
 
 @media only screen and (max-width: 1024px) {
-    .trending{
-        display: none;
-    }
+  .trending {
+    display: none;
+  }
+  .yellow {
+    padding: 0;
+    padding-top: 5%;
+    padding-bottom: 4%;
+  }
 }
