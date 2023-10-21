@@ -28,7 +28,7 @@ const Register = () => {
     };
 
     return (
-        <div className="border border-5 card w-50 text-center p-5 m-auto mt-5">
+        <div className="border border-5 card w-75 text-center p-5 m-auto mt-5">
             <img className="m-auto" src="/logo.png" alt="" />
             <h2><b>Registration</b></h2>
             <form onSubmit={handleSubmit}>
@@ -70,7 +70,7 @@ const Register = () => {
                 </div>
                 <button className="btn bg-primary text-white px-5" type="submit">Sign Up</button><br />
             </form>
-            <button className=" w-25 m-auto p-1 btn btn-sm bg-secondary text-white mt-2" type="button" onClick={() => navigate('/login')}>Login</button>
+            <button className="m-auto p-1 btn btn-sm bg-secondary text-white mt-2" type="button" onClick={() => navigate('/login')}>Login</button>
         </div>
     )
 }
