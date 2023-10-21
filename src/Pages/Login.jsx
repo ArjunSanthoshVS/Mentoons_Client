@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-    const apiUrl = "http://localhost:5000"
+    const apiUrl = "https://mentoons-server.onrender.com"
     const navigate = useNavigate()
 
     const [user, setUser] = useState({

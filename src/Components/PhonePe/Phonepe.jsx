@@ -8,7 +8,7 @@ const Phonepe = ({ amount }) => {
 
     // Send a request to the server to initiate the payment
     axios
-      .post('http://localhost:5000/checkout', {
+      .post('https://mentoons-server.onrender.com/checkout', {
         amount,
         userId: user?.user?._id,
         userName: userName,

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from 'axios'
 
 const Register = () => {
-    const apiUrl = "http://localhost:5000"
+    const apiUrl = "https://mentoons-server.onrender.com"
     const navigate = useNavigate()
 
     const [formData, setFormData] = useState({

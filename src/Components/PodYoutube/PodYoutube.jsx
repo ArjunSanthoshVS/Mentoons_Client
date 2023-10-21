@@ -12,7 +12,7 @@ const PodYoutube = () => {
     const handlePurchase = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.get(`http://localhost:5000/purchase_status?userId=${userId}`);
+            const response = await axios.get(`https://mentoons-server.onrender.com/purchase_status?userId=${userId}`);
             if (response.data.hasPurchased) {
                 setHasPurchased(true);
             } else {
@@ -28,7 +28,7 @@ const PodYoutube = () => {
         const date = Date.now()
         const userName = user?.user?.name
         const amount = 2000
-        axios.post('http://localhost:5000/subscription', {
+        axios.post('https://mentoons-server.onrender.com/subscription', {
             amount,
             userId: user?.user?._id,
             userName: userName,

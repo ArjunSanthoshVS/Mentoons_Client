@@ -8,7 +8,7 @@ const Category = () => {
     const addToCart = async (item) => {
         console.log(item);
         try {
-            const response = await axios.post("http://localhost:5000/add_to_cart", { item, userId })
+            const response = await axios.post("https://mentoons-server.onrender.com/add_to_cart", { item, userId })
             console.log(response);
             // navigate('/cart')
         } catch (err) {

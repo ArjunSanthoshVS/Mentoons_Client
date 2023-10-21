@@ -10,7 +10,7 @@ const CartList = () => {
 
     useEffect(() => {
         const fetchCartItems = async () => {
-            const response = await axios.get(`http://localhost:5000/cart_items?userId=${userId}`);
+            const response = await axios.get(`https://mentoons-server.onrender.com/cart_items?userId=${userId}`);
             setCart(response?.data?.products);
         }
         fetchCartItems();
@@ -18,7 +18,7 @@ const CartList = () => {
 
     const removeFromCart = async (itemId) => {
         try {
-            await axios.get(`http://localhost:5000/removeFromCart?itemId=${itemId}`);
+            await axios.get(`https://mentoons-server.onrender.com/removeFromCart?itemId=${itemId}`);
             setCart((prevCart) => prevCart.filter(item => item._id !== itemId));
         } catch (error) {
             console.error("Error removing item from cart:", error);
