@@ -1,19 +1,18 @@
 import axios from "axios";
 
 const Phonepe = ({ amount }) => {
-  const handlePayment = () => {
+  const handlePayment =async () => {
     const date = Date.now();
     const user = JSON.parse(localStorage.getItem("user"));
     const userName = user?.user?.name;
 
     // Send a request to the server to initiate the payment
-    axios
-      .post('https://mentoons-server.onrender.com/checkout', {
-        amount,
-        userId: user?.user?._id,
-        userName: userName,
-        createdAt: date
-      })
+    await axios.post('https://mentoons-server.onrender.com/checkout', {
+      amount,
+      userId: user?.user?._id,
+      userName: userName,
+      createdAt: date
+    })
       .then((res) => {
         if (res.data.url) {
           window.location.href = res.data.url;
